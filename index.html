@@ -1,0 +1,83 @@
+ 
+<html>
+    <head>
+      <title>Hand Gesture Identification</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+  <h3 class="btn btn-primary heading">HAND GESTURE APP
+  <br>
+  <span>&#9995;</span>
+  <span>&#9996;</span>
+  <span>&#128070;</span>
+  <span>&#128076;</span>
+  <span>&#128077;</span>
+  <span>&#128078;</span>
+  </h3>
+  
+        <br><br>
+  
+        <p style="font-size: 22px;">Take your selfie to generate a gesture
+            <br>
+          <b style="color: rgb(0, 234, 255)">Thumbs Up</b>
+          <br>
+          <b style="color: rgb(0, 204, 255)">Thumbs Down</b>
+          <br>
+          <b style="color: rgb(0, 132, 255)">Thumbs Sideways</b>
+          <br>
+          <b style="color: rgb(0, 81, 255)">Peace</b>
+          <br>
+          <b style="color: rgb(0, 0, 255)">Heart</b>
+          <br>
+          <b style="color: rgb(89, 0, 255)">Good</b>
+          <br>
+          <b style="color: rgb(153, 0, 255)">High Five</b>
+          <br>
+          <b style="color: rgb(179, 0, 255)">Loser</b>
+          <br>
+        </p>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Webcam View -  </label>
+          <div id="camera"></div>
+          <br><br>
+          <button onclick="take_snapshot();" class="btn btn-warning">Capture Image</button>
+  </div>
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <label>Prediction 1 - </label>
+    <p class="emotion_name" id="result_emotion_name"></p>
+    <p class="emoji" id="update_emoji"></p>
+  
+    <label>Prediction 2 - </label>
+    <p class="emotion_name" id="result_emotion_name2"></p>
+    <p class="emoji" id="update_emoji2"></p>
+  </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot - </label>
+          <div id="result"></div>
+          <br><br>
+          <button onclick="check();" class="btn btn-success">Predict Emotion</button>
+        </div>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   
